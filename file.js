@@ -21,10 +21,12 @@ function getCardsPl(event) {
   const cardIndex = Array.from(cards).indexOf(event.currentTarget);
   const { polish } = flashcardsData[cardIndex];
   cards[cardIndex].innerHTML = polish;
+  cards[cardIndex].setAttribute("style", "flashcard");
 }
 function getCardsEn(event) {
   const cardIndex = Array.from(cards).indexOf(event.currentTarget);
   const { english } = flashcardsData[cardIndex];
   console.log(english);
   cards[cardIndex].innerHTML = english;
+  cards[cardIndex].setAttribute("style", "color: blue;font-size: 50px");
 }
